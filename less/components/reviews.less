@@ -1,0 +1,167 @@
+.reviews {
+	background-color: #f5f5f5;
+
+	&__wrap {
+		max-width: 964px;
+		margin: 0 auto;
+		padding-top: 33px;
+		padding-bottom: 60px;
+		position: relative;
+	}	
+
+	&__wrap--no-padding {
+		padding-top: 0;
+	}
+
+	&__title-container {
+		font-size: 34px;
+		color: #424242;
+		text-align: center;
+		padding-bottom: 40px;
+	}
+
+	&__title-container h3 {
+		font-weight: 400;
+	}
+
+	&__title-container span {
+		display: block;
+		font-weight: 700;
+	}
+
+	&__slides {
+		position: relative;
+	}
+
+	&__content {
+		display: block;
+		padding: 40px 0;
+		width: 320px;
+    	margin: 0 auto;
+    	position: relative;
+	}
+
+	&__content svg {
+		position: absolute;
+		width: 354px;
+		height: 255px;
+		left: -15px;
+		top: 0;
+	}
+
+	&__slides img {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+
+	&__slides p {
+		font-size: 14px;
+		color: #424242;
+		width: 280px;
+		margin: 0 auto;
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		color: #e42c11;
+		background-color: #f5f5f5;
+		border: 3px solid #e42c11;
+		text-align: center;
+		width: 255px;
+		font-size: 18px;
+		line-height: 38px;
+		transition: ease 0.3s;
+		margin: 0 auto;
+		margin-top: 60px;
+		&:hover::before {
+		    opacity: 1;
+		    -webkit-transform: scale(1, 1);
+		    transform: scale(1, 1);
+		}
+	}
+
+
+	&__link:hover {
+		color: #fff;
+	}
+
+	&__link span {
+		position: relative;
+		z-index: 10;
+	}
+
+	&__link::before {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    z-index: 1;
+	    opacity: 0;
+	    background-color: #e42c11;
+	    -webkit-transition: all 0.4s;
+	    -moz-transition: all 0.4s;
+	    -o-transition: all 0.4s;
+	    transition: all 0.4s;
+	    -webkit-transform: scale(0.5, 1);
+	    transform: scale(0.5, 1);
+	    will-change: opacity;
+	}
+
+	&__btn {
+		background-color: transparent;
+		outline: none;
+		width: 20px;
+		transition: ease 0.3s;
+		cursor: pointer;
+		z-index: 1000;
+		opacity: 0;
+	}
+
+	&__btn svg:hover polyline {
+		stroke: #bdbdbd;
+		transition: ease 0.3s;
+	}
+
+	&__btn--next {
+		position: absolute;
+		right: 0;
+		top: 300px;
+	}
+
+	&__btn--prev {
+		position: absolute;
+		left: 0;
+		top: 300px;
+	}
+
+	.slider:hover &__btn {
+		opacity: 1;
+	}
+
+	&__full-content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__images {
+		width: 49%;
+		margin-top: 50px;
+	}
+
+	&__title {
+		background-color: #fff;
+		padding-bottom: 23px;
+	}
+
+	&__title h1 {
+		max-width: 964px;
+		margin: 0 auto;
+		font-size: 34px;
+		font-weight: 400;
+		color: #424242;
+	}
+}
