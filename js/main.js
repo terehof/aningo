@@ -54,6 +54,7 @@ $(function() {
 	        $('.product__btn').hide();
 
 	        $('#slider-product').css({"margin-left" : "0px"});
+	        $('.product__slides').css({"text-align" : "left"});
 	        $('.slick-track').css({"margin" : "0px"});
 
 	    }
@@ -215,5 +216,25 @@ $(function() {
 		$( ".catalog__filter-js" ).slideToggle( "slow", function() {
 		});
 	});
+
+
+
+	 /*Window risize for slider
+	=================*/
+
+	var winWidth = $(window).width();
+	// берешь ширину окна
+	var blocksLength = $('.product__slides').length
+
+	var visibleCount;
+	if (winWidth <= 509) {
+	  visibleCount = 3;
+	  // для экранов меньших чем 480px - только два слайда видимых
+	}
+
+	if ($('.block').length <= visibleCount) {
+	  $('.product__btn').hide();
+	  $('.product__slides').css({"text-align" : "center"});
+	}
 
 });

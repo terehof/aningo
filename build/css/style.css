@@ -45,6 +45,7 @@ body {
   src: url('../fonts/rouble.eot');
   src: local('ALS Rubl'), local('ALSRubl'), url('../fonts/rouble.woff') format('woff'), url('../fonts/rouble.ttf') format('truetype'), url('rouble.svg#ALSRubl') format('svg');
   font-weight: 400;
+  font-style: normal;
 }
 .overflowHidden {
   position: fixed;
@@ -1644,21 +1645,21 @@ body {
   -webkit-user-select: none;
   font-weight: 400;
   transition: ease 0.3s;
+  /*&:hover::before {
+			content: "";
+			position: absolute;
+			background-repeat: no-repeat;
+			width: 35px;
+			height: 35px;
+			right: 0;
+			top: 0;
+			background-image: url("../img/checkbox-white.svg");
+		}*/
 }
 .catalog__content label:hover {
   background-color: #bdbdbd;
   transition: ease 0.3s;
   color: #fff;
-}
-.catalog__content label:hover::before {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  width: 35px;
-  height: 35px;
-  right: 0;
-  top: 0;
-  background-image: url("../img/checkbox-white.svg");
 }
 .catalog__content-flags label {
   padding-left: 40px;
@@ -1678,6 +1679,17 @@ body {
   height: 35px;
   right: 0;
   top: 0;
+}
+.catalog input[type="checkbox"]:checked + label:hover::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checkbox-white.svg");
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  right: 0;
+  top: 0;
+  transition: ease 0.3s;
 }
 .catalog input[type="checkbox"]:checked + label {
   font-weight: 500;
@@ -1720,6 +1732,7 @@ body {
   background-size: cover;
   z-index: 2;
   left: 10px;
+  top: 10px;
 }
 .catalog .icons {
   position: absolute;
@@ -1739,6 +1752,7 @@ body {
   margin: 0 auto;
 }
 .catalog-list__img {
+  position: relative;
   width: 220px;
   height: 220px;
   background-size: contain;
@@ -1757,7 +1771,6 @@ body {
 }
 .catalog-list__content a {
   display: block;
-  position: relative;
   width: 100%;
   padding: 10px;
   transition: ease 0.3s;
@@ -1781,8 +1794,8 @@ body {
   display: -webkit-box;
   display: flex;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
 }
 .catalog-list__item {
   display: -webkit-box;
