@@ -955,7 +955,11 @@ body {
 }
 .product #slider-product {
   position: relative;
-  margin-left: 35px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.product__slides {
+  text-align: center;
 }
 .product__about {
   display: -webkit-box;
@@ -992,6 +996,7 @@ body {
 .product__img img {
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 .product__info-title p {
   margin-left: -5px;
@@ -1050,6 +1055,17 @@ body {
   display: inline-block;
   transition: ease 0.3s;
 }
+.product__slides a::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.65);
+  transition: ease 0.3s;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
 .product__slides a:hover::before {
   position: absolute;
   content: "";
@@ -1057,6 +1073,9 @@ body {
   height: 100%;
   background-color: rgba(33, 33, 33, 0.65);
   transition: ease 0.3s;
+  left: 0;
+  right: 0;
+  opacity: 1;
 }
 .product__goods {
   width: 67.946%;
@@ -1116,12 +1135,13 @@ body {
 }
 .product .table-js {
   display: block;
-  height: 107px;
+  max-height: 107px;
   overflow: hidden;
-  transition: height 0.4s ease;
+  transition: 0.2s ease;
 }
 .product .opened {
-  height: auto;
+  max-height: 1000px;
+  transition: 1.3s ease;
 }
 .objects__big {
   position: relative;
@@ -1825,7 +1845,7 @@ body {
 }
 .modal__slider {
   position: relative;
-  width: 69.502%;
+  width: 670px;
 }
 .modal__slider img {
   display: block;
@@ -2056,11 +2076,11 @@ body {
 }
 .modal__close {
   text-align: center;
-  text-decoration: underline;
   padding-bottom: 40px;
 }
 .modal__close a {
   color: #757575;
+  border-bottom: 1px solid #757575;
 }
 .modal .rub {
   font-family: 'ALSRublRegular';
@@ -3330,6 +3350,9 @@ body {
   }
   .product__goods td {
     font-size: 13px;
+  }
+  .product__btn--next {
+    right: -8px;
   }
   .objects__description h1 {
     font-size: 24px;

@@ -126,6 +126,7 @@ $(function() {
 
 	$( ".btn-open-js" ).click(function() {
 		$(this).prev(".table-js").toggleClass('opened');
+		$(this).hide();
 		/*$(".table-js").toggleClass('opened');*/
 	});
 
