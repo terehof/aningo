@@ -237,4 +237,17 @@ $(function() {
 	  $('.product__slides').css({"text-align" : "center"});
 	}
 
+
+	/*Validate
+	=================*/
+
+
+	$("#form-js").validate({
+		messages: {
+			name: "Пожалуйста,представьтесь",
+			telephone: "Пожалуйста,укажите номер телефона",
+			email: "Пожалуйста,укажите E-mail",
+		}
+	});
+
 });

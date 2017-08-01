@@ -15,10 +15,10 @@
 	&__fields input {
 		width: 285px;
 		font-size: 18px;
-		color: #bdbdbd;
 		padding: 10px;
 		background-color: #fff;
 		border: none;
+		color: #424242;
 	}
 
 	&__fields {
@@ -33,6 +33,7 @@
 
 	input::placeholder {
 		opacity: 1;
+		color: #bdbdbd;
 	}
 
 	input:invalid {
@@ -103,5 +104,30 @@
 		text-decoration-color: #8a8a8a; 
 		 -moz-text-decoration-color: #8a8a8a;
 		text-decoration: underline;
+	}
+
+	.contact-field {
+		color: #bdbdbd; 
+	}
+
+	.contact-field:focus {
+		color: #424242;
+	}
+
+	&__field-content {
+		position: relative;
+	}
+	
+	&__field-content label {
+		position: absolute;
+		bottom: -28px;
+		text-align: center;
+		padding-top: 8px;
+		left: 0;
+		color: #ffab00;
+		border-top: 2px solid #ffab00;
+		width: 285px;
+		font-size: 16px;
+		font-weight: 400;
 	}
 }

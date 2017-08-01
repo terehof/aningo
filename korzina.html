@@ -279,11 +279,17 @@
 			<div class="contact-input__title">
 				<p>Контактные данные</p>
 			</div>
-			<form action="" name="contacts">
+			<form id="form-js" action="" name="contacts">
 				<div class="contact-input__fields">
-					<input type="text" name="name" placeholder="ФИО">
-					<input class="contact-input  input-mask" required id="tel-mask" type="tel" name="telephone" pattern="^[0-9\-\+\s\(\)]*$">
-					<input type="email" name="email" placeholder="E-mail">
+					<div class="contact-input__field-content">
+						<input type="text" id="name" name="name" placeholder="ФИО" required>
+					</div>
+					<div class="contact-input__field-content">
+						<input class="contact-field input-mask" required id="telephone" type="tel" name="telephone" pattern="^[0-9\-\+\s\(\)]*$" required>
+					</div>
+					<div class="contact-input__field-content">
+						<input type="email" id="email" name="email" placeholder="E-mail" required>
+					</div>
 				</div>
 				<button class="contact-input__btn">
 					<span>Оформить заказ</span>
@@ -445,6 +451,7 @@
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.inputmask.bundle.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
