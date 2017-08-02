@@ -32,6 +32,7 @@
 		font-size: 34px;
 		font-weight: 400;
 		margin-bottom: 12px;
+		margin-top: -6px;
 	}
 
 	&__info p {
@@ -99,7 +100,7 @@
 		width: 25px;
 		cursor: pointer;
 		top: 40px;
-		z-index: 10;
+		z-index: 1;
 	}
 
 	&__btn svg:hover polyline {
@@ -148,6 +149,43 @@
 		}
 	}
 
+	&__slides button {
+		position: relative;
+		display: inline-block;
+		transition: ease 0.3s;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: rgba(189, 189, 189, 1);
+			transition: ease 0.3s;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			background-size: 25px;
+			background-image: url("../img/play-icon.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		&:hover::before {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: rgba(189, 189, 189, 1);
+			background-image: url("../img/play-icon.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 25px;
+			transition: ease 0.3s;
+			left: 0;
+			right: 0;
+			opacity: 1;
+
+		}
+	}
+
 	&__goods {
 		width: 67.946%;
 		color: #424242;
@@ -170,6 +208,12 @@
 	&__goods a {
 		color: #424242;
 		border-bottom: 1px solid #636363;
+		transition: ease 0.3s;
+		&:hover {
+			color: #bdbdbd;
+			transition: ease 0.3s;
+			border-bottom: 1px solid #bdbdbd;
+		}
 	}
 
 	&__col-1 {
@@ -188,6 +232,7 @@
 
 	&__col-4 {
 		width: 4%;
+		vertical-align: baseline;
 	}
 
 	&__col-5 {
@@ -206,6 +251,11 @@
 		color: #757575;
 		background-color: transparent;
 		letter-spacing: 0.02em;
+		transition: ease 0.3s;
+		&:hover {
+			color: #bdbdbd;
+			transition: ease 0.3s;
+		}
 	}
 
 	.btn-open-js::before {
@@ -215,6 +265,12 @@
 		width: 105px;
 		height: 2px;
 		bottom: -2px;
+		transition: ease 0.3s;
+	}
+
+	.btn-open-js:hover::before {
+		background-image: url("../img/dashed-line-hover.svg");
+		transition: ease 0.3s;
 	}
 
 	.table-js {

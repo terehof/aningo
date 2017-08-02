@@ -71,5 +71,55 @@
 		font-size: 16px;
 		color: #424242;
 		border-bottom: 1px solid #8a8a8a;
+		transition: ease 0.3s;
+		&:hover {
+			color: #bdbdbd;
+			transition: ease 0.3s;
+			border-bottom: 1px solid #bdbdbd;
+		}
 	}
+
+	&__control {
+		display: flex;
+		position: absolute;
+		width: 60px;
+		background-color: transparent;
+		z-index: 1;
+		top: 50%;
+		transform: translate(0,-50%);
+	}
+
+	&__btn {
+		position: relative;
+		background-color: transparent;
+		outline: none;
+		cursor: pointer;
+		z-index: 1;
+	}
+
+	&__btn svg polyline {
+		transition: ease 0.3s;
+	}
+
+	&__btn svg {
+		position: absolute;
+		top: 50%;
+		transform: translate(0%,-50%);
+		height: 60px;
+	}
+
+	&__btn svg:hover polyline {
+		stroke: #bdbdbd;
+		transition: ease 0.3s;
+	}
+
+	&__control--left {
+		left: 0px;
+		text-align: center;
+	}
+
+	&__control--right {
+		right: 0px;
+	}
+
 }

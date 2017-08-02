@@ -982,6 +982,7 @@ body {
   font-size: 34px;
   font-weight: 400;
   margin-bottom: 12px;
+  margin-top: -6px;
 }
 .product__info p {
   font-size: 16px;
@@ -1036,7 +1037,7 @@ body {
   width: 25px;
   cursor: pointer;
   top: 40px;
-  z-index: 10;
+  z-index: 1;
 }
 .product__btn svg:hover polyline {
   stroke: #bdbdbd;
@@ -1078,6 +1079,41 @@ body {
   right: 0;
   opacity: 1;
 }
+.product__slides button {
+  position: relative;
+  display: inline-block;
+  transition: ease 0.3s;
+}
+.product__slides button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #bdbdbd;
+  transition: ease 0.3s;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-size: 25px;
+  background-image: url("../img/play-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.product__slides button:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #bdbdbd;
+  background-image: url("../img/play-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+  transition: ease 0.3s;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
 .product__goods {
   width: 67.946%;
   color: #424242;
@@ -1097,6 +1133,12 @@ body {
 .product__goods a {
   color: #424242;
   border-bottom: 1px solid #636363;
+  transition: ease 0.3s;
+}
+.product__goods a:hover {
+  color: #bdbdbd;
+  transition: ease 0.3s;
+  border-bottom: 1px solid #bdbdbd;
 }
 .product__col-1 {
   width: 370px;
@@ -1111,6 +1153,7 @@ body {
 }
 .product__col-4 {
   width: 4%;
+  vertical-align: baseline;
 }
 .product__col-5 {
   width: 4%;
@@ -1125,6 +1168,11 @@ body {
   color: #757575;
   background-color: transparent;
   letter-spacing: 0.02em;
+  transition: ease 0.3s;
+}
+.product .btn-open-js:hover {
+  color: #bdbdbd;
+  transition: ease 0.3s;
 }
 .product .btn-open-js::before {
   position: absolute;
@@ -1133,6 +1181,11 @@ body {
   width: 105px;
   height: 2px;
   bottom: -2px;
+  transition: ease 0.3s;
+}
+.product .btn-open-js:hover::before {
+  background-image: url("../img/dashed-line-hover.svg");
+  transition: ease 0.3s;
 }
 .product .table-js {
   display: block;
@@ -1210,6 +1263,51 @@ body {
   font-size: 16px;
   color: #424242;
   border-bottom: 1px solid #8a8a8a;
+  transition: ease 0.3s;
+}
+.objects__text a:hover {
+  color: #bdbdbd;
+  transition: ease 0.3s;
+  border-bottom: 1px solid #bdbdbd;
+}
+.objects__control {
+  display: -webkit-box;
+  display: flex;
+  position: absolute;
+  width: 60px;
+  background-color: transparent;
+  z-index: 1;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.objects__btn {
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.objects__btn svg polyline {
+  transition: ease 0.3s;
+}
+.objects__btn svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  height: 60px;
+}
+.objects__btn svg:hover polyline {
+  stroke: #bdbdbd;
+  transition: ease 0.3s;
+}
+.objects__control--left {
+  left: 0px;
+  text-align: center;
+}
+.objects__control--right {
+  right: 0px;
 }
 .basket__wrap {
   max-width: 964px;
@@ -1284,6 +1382,7 @@ body {
 }
 .basket__col-2 {
   width: 10%;
+  padding-left: 12px;
 }
 .basket__col-4 {
   text-align: center;
@@ -1323,7 +1422,7 @@ body {
   font-family: 'ALSRublRegular';
   font-weight: 400;
 }
-.basket #input {
+.basket .sum {
   width: 55px;
   text-align: center;
   color: #424242;
@@ -1346,6 +1445,12 @@ body {
   -moz-user-select: text;
   -webkit-user-select: none;
   color: #bdbdbd;
+  transition: ease 0.3s;
+}
+.basket .plus:hover,
+.basket .minus:hover {
+  color: #616161;
+  transition: ease 0.3s;
 }
 .contact-input {
   background-color: #f5f5f5;
@@ -1448,6 +1553,11 @@ body {
           text-decoration-color: #8a8a8a;
   -moz-text-decoration-color: #8a8a8a;
   text-decoration: underline;
+  transition: ease 0.3s;
+}
+.contact-input__description a:hover {
+  color: #616161;
+  transition: ease 0.3s;
 }
 .contact-input .contact-field {
   color: #bdbdbd;
@@ -1558,6 +1668,12 @@ body {
   border-bottom: 1px solid #8a8a8a;
   display: inline-block;
   height: 19px;
+  transition: ease 0.3s;
+}
+.contacts__address a:hover {
+  color: #bdbdbd;
+  transition: ease 0.3s;
+  border-bottom: 1px solid #bdbdbd;
 }
 .contacts__work-time {
   padding: 20px 0;
@@ -1607,6 +1723,8 @@ body {
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
+  max-width: 984px;
+  margin: 0 auto;
   letter-spacing: 0.02em;
   color: #424242;
   padding-bottom: 20px;
@@ -1726,6 +1844,9 @@ body {
           align-items: center;
   min-height: 41px;
 }
+.catalog__status {
+  margin-right: 30px;
+}
 .catalog .active {
   background-color: #616161;
   pointer-events: none;
@@ -1833,7 +1954,9 @@ body {
   margin: 0 auto;
 }
 .catalog-list .rub {
+  display: inline-block;
   font-family: 'ALSRublRegular';
+  padding-left: 5px;
 }
 .facts__wrap {
   max-width: 964px;
@@ -1848,7 +1971,7 @@ body {
 .facts p {
   padding-top: 24px;
   color: #bdbdbd;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.02em;
   font-weight: 400;
 }
@@ -1896,20 +2019,32 @@ body {
   width: 40px;
   height: 40px;
   background-color: rgba(33, 33, 33, 0.85);
-  z-index: 10;
+  z-index: 1;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
 .modal__btn {
+  position: relative;
   background-color: transparent;
   outline: none;
   width: 25px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1;
 }
 .modal__btn svg polyline {
   transition: ease 0.3s;
+}
+.modal__btn svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.modal__btn--next svg {
+  left: 50%;
+  -webkit-transform: translate(-25%, -50%);
+          transform: translate(-25%, -50%);
 }
 .modal__btn svg:hover polyline {
   stroke: #bdbdbd;
@@ -1938,6 +2073,7 @@ body {
 }
 .modal__info-title {
   margin-bottom: 25px;
+  margin-top: -8px;
 }
 .modal__info-title p {
   font-size: 34px;
@@ -2013,7 +2149,7 @@ body {
 .modal__input {
   background-color: transparent;
   font-size: 24px;
-  color: #bdbdbd;
+  color: #757575;
   transition: ease 0.3s;
   margin-bottom: 20px;
 }
@@ -2080,20 +2216,28 @@ body {
   margin-bottom: 4px;
 }
 .modal__table {
-  width: 70.502%;
+  width: 69.502%;
 }
 .modal__table table {
   width: 100%;
   color: #757575;
+}
+.modal__table a {
+  color: #757575;
+  transition: ease 0.3s;
+}
+.modal__table tr:hover a {
+  color: #e0e0e0;
+  transition: ease 0.3s;
+}
+.modal .active-col a {
+  color: #e0e0e0;
 }
 .modal__table td {
   padding-bottom: 15px;
 }
 .modal__col-1 {
   width: 195px;
-}
-.modal__col-1 a {
-  color: #757575;
 }
 .modal__col-2 {
   width: 100px;
@@ -2102,8 +2246,11 @@ body {
   width: auto;
 }
 .modal__col-4 {
-  padding-left: 15px;
+  padding-left: 9px;
   width: auto;
+}
+.modal__col-4 img:nth-child(2) {
+  margin-left: 6px;
 }
 .modal__col-5 {
   text-align: center;
@@ -2111,13 +2258,19 @@ body {
 .modal__col-article {
   width: 240px;
 }
-.modal__close {
+.modal__close-bottom {
   text-align: center;
   padding-bottom: 40px;
+  margin-top: 65px;
 }
-.modal__close a {
+.modal__close-bottom a {
   color: #757575;
   border-bottom: 1px solid #757575;
+  transition: ease 0.3s;
+}
+.modal__close-bottom a:hover {
+  color: #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
 .modal .rub {
   font-family: 'ALSRublRegular';
@@ -2438,6 +2591,12 @@ body {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .objects__btn svg {
+    height: 40px;
+  }
+  .objects__control {
+    width: 40px;
+  }
   .works__main-title {
     padding-left: 15px;
     padding-right: 15px;
@@ -2531,7 +2690,7 @@ body {
     width: 27%;
   }
   .footer__telephone-container a {
-    font-size: 29px;
+    font-size: 28px;
   }
 }
 @media (max-width: 960px) {
@@ -3175,6 +3334,12 @@ body {
   .objects__description h1 {
     font-size: 30px;
   }
+  .objects__btn svg {
+    height: 25px;
+  }
+  .objects__control {
+    width: 25px;
+  }
   .summary__table {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3400,8 +3565,20 @@ body {
   .product__btn--next {
     right: -8px;
   }
+  .objects__big {
+    overflow: hidden;
+  }
   .objects__description h1 {
     font-size: 24px;
+  }
+  .objects__btn svg {
+    height: 18px;
+  }
+  .objects__control {
+    width: 12px;
+  }
+  .objects__control--left {
+    left: -5px;
   }
   .footer__info--mobile p {
     font-size: 12px;

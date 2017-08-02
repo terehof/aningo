@@ -95,33 +95,6 @@ $(function() {
 	});
 
 
-
-	/* Slick slider Pop-up
-	=========================*/
-
-
-	$("#slider-pop-up").slick({
-	  infinite: true,
-	  slidesToShow: 1,
-	  slidesToScroll: 1,
-	  rows: 1,
-	  arrows: false,
-	  speed: 700,
-	  dots: false
-
-	});
-
-
-	$(".modal__btn--prev").on("click", function() {
-		$("#slider-pop-up").slick("slickPrev");
-	});
-
-	$(".modal__btn--next").on("click", function() {
-		$("#slider-pop-up").slick("slickNext");
-	});
-
-
-
 	/* Table Open slide-down
 	=========================================*/
 
@@ -194,13 +167,13 @@ $(function() {
 	=================*/
 
 	$('.plus').on('click', function() {
-	  var val = parseFloat($('#input').val());
-	  $('#input').val(val + 1);
+	  var val = parseFloat($('.sum').val());
+	  $('.sum').val(val + 1);
 	})
 	$('.minus').on('click', function() {
-	  var val = parseFloat($('#input').val());
+	  var val = parseFloat($('.sum').val());
 	  if (val > 1) {
-	     $('#input').val(val - 1);   
+	     $('.sum').val(val - 1);   
 	  }
 	});
 

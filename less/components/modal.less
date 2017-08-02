@@ -43,21 +43,33 @@
 		width: 40px;
 		height: 40px;
 		background-color: rgba(33, 33, 33, 0.85);
-		z-index: 10;
+		z-index: 1;
 		top: 50%;
 		transform: translate(0,-50%);
 	}
 
 	&__btn {
+		position: relative;
 		background-color: transparent;
 		outline: none;
 		width: 25px;
 		cursor: pointer;
-		z-index: 10;
+		z-index: 1;
 	}
 
 	&__btn svg polyline {
 		transition: ease 0.3s;
+	}
+
+	&__btn svg {
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	&__btn--next svg {
+		left: 50%;
+		transform: translate(-25%,-50%);
 	}
 
 	&__btn svg:hover polyline {
@@ -88,6 +100,7 @@
 
 	&__info-title {
 		margin-bottom: 25px;
+		margin-top: -8px;
 	}
 
 	&__info-title p {
@@ -178,7 +191,7 @@
 	&__input {
 		background-color: transparent;
 		font-size: 24px;
-		color: #bdbdbd;
+		color: #757575;
 		transition: ease 0.3s;
 		margin-bottom: 20px;
 	}
@@ -249,12 +262,26 @@
 	}
 
 	&__table {
-		width: 70.502%;
+		width: 69.502%;
 	}
 
 	&__table table {
 		width: 100%;
 		color: #757575;
+	}
+
+	&__table a {
+		color: #757575;
+		transition: ease 0.3s;
+	}
+
+	&__table tr:hover a {
+		color: #e0e0e0;
+		transition: ease 0.3s;
+	}
+
+	.active-col a {
+		color: #e0e0e0;
 	}
 	
 	&__table td {
@@ -263,10 +290,6 @@
 
 	&__col-1 {
 		width: 195px;
-	}
-
-	&__col-1 a {
-		color: #757575;
 	}
 
 	&__col-2 {
@@ -278,8 +301,12 @@
 	}
 
 	&__col-4 {
-		padding-left: 15px;
+		padding-left: 9px;
 		width: auto;
+	}
+
+	&__col-4 img:nth-child(2) {
+		margin-left: 6px;
 	}
 
 	&__col-5 {
@@ -290,14 +317,20 @@
 		width: 240px;
 	}
 
-	&__close {
+	&__close-bottom {
 		text-align: center;
 		padding-bottom: 40px;
+		margin-top: 65px;
 	}
 
-	&__close a {
+	&__close-bottom a {
 		color: #757575;
 		border-bottom: 1px solid #757575;
+		transition: ease 0.3s;
+		&:hover {
+			color: #e0e0e0;
+			border-bottom: 1px solid #e0e0e0;
+		}
 	}
 
 	.rub {
