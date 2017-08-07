@@ -1212,7 +1212,7 @@ body {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
 }
 .objects__description-wrap {
   max-width: 900px;
