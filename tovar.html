@@ -219,12 +219,12 @@
 					</button>
 					<div id="slider-product">
 						<div class="product__slides">
-							<button class="slider-video">
+							<a class="slider-video" data-fancybox data-src="#modal-big" href="javascript://">
 								<img src="img/slide-prod-1.jpg" alt="">
-							</button>
+							</a>
 						</div>
 						<div class="product__slides">
-							<a href="#">
+							<a data-fancybox data-src="#modal-big" href="javascript://">
 								<img src="img/slide-prod-1.jpg" alt="">
 							</a>
 						</div>
@@ -262,7 +262,7 @@
 					<strong>Плиты</strong>
 					<table class="table-js">
 						<tr>
-							<td class="product__col-1"><a href="#">10x300x300 мм</a></td>
+							<td class="product__col-1"><a data-fancybox data-src="#modal" href="javascript://">10x300x300 мм</a></td>
 							<td class="product__col-2"></td>
 							<td class="product__col-3">7500 <span class="rub">i</span></td>
 							<td class="product__col-4"><img src="img/ok.svg" width="13" alt=""></td>
@@ -387,11 +387,11 @@
 		</div>
 	</section>
 
-	<div class="modal">
+	<div class="modal" id="modal">
 		<div class="modal__wrap">
 			<div class="modal__title">
 				<p>Плита Spray White  (G418) полированная</p>
-				<a class="modal__close" href="#">
+				<button class="modal__close  fancybox-close-small" data-fancybox-close>
 					<svg width="33" x="0px" y="0px"
 						 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 					<style type="text/css">
@@ -402,7 +402,7 @@
 						<rect x="1.2" y="15" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -6.981 16.1463)" class="st30" width="29.6" height="3"/>
 					</g>
 					</svg>
-				</a>
+				</button>
 			</div>
 			<div class="modal__container">
 				<div class="modal__slider">
@@ -533,7 +533,59 @@
 				</table>
 			</div>
 			<div class="modal__close-bottom">
-				<a href="#">Закрыть и продолжить</a>
+				<button class="fancybox-close-small" data-fancybox-close>Закрыть и продолжить</button>
+			</div>
+		</div>	
+	</div>
+
+	<div class="modal  modal-big-img" id="modal-big">
+		<div class="modal__wrap">
+			<div class="modal__title--big  modal__title">
+				<p>Плита Spray White  (G418) полированная</p>
+				<button class="modal__close  fancybox-close-small" data-fancybox-close>
+					<svg width="33" x="0px" y="0px"
+						 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+					<style type="text/css">
+						.st30{fill:#757575;}
+					</style>
+					<g>
+						<rect x="14.5" y="1.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -6.9808 16.1464)" class="st30" width="3" height="29.6"/>
+						<rect x="1.2" y="15" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -6.981 16.1463)" class="st30" width="29.6" height="3"/>
+					</g>
+					</svg>
+				</button>
+			</div>
+			<div class="modal__container">
+				<div class="modal__slider  modal__slider--big">
+					<div class="modal__control  modal__control--left">
+						<button class="modal__btn  modal__btn--prev">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+							<style type="text/css">
+								.st6{fill:none;stroke:#757575;stroke-width:2;stroke-miterlimit:10;}
+							</style>
+							<polyline class="st6" points="24,24 11,12 24,0 "/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal__control  modal__control--right">
+						<button class="modal__btn  modal__btn--next">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+							<style type="text/css">
+								.st7{fill:none;stroke:#757575;stroke-width:2;stroke-miterlimit:10;}
+							</style>
+							<polyline class="st7" points="0,0 13,12 0,24 "/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal__slides">
+						<img src="img/pop-up-1.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="modal__close-bottom">
+				<button class="fancybox-close-small" data-fancybox-close>Закрыть и продолжить</button>
 			</div>
 		</div>	
 	</div>
@@ -688,6 +740,7 @@
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.inputmask.bundle.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,14 @@
 .modal {
+	display: none;
+	position: fixed;
 	background-color: #212121;
+	height: 100vh;
+	z-index: 1001;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
 
 	&__wrap {
 		max-width: 964px;
@@ -138,6 +147,10 @@
 	&__price p {
 		font-size: 34px;
 		margin-right: 30px;
+	}
+
+	&__close {
+		background-color: transparent;
 	}
 
 	&__close svg:hover rect {
@@ -323,10 +336,11 @@
 		margin-top: 65px;
 	}
 
-	&__close-bottom a {
+	&__close-bottom button {
 		color: #757575;
 		border-bottom: 1px solid #757575;
 		transition: ease 0.3s;
+		background-color: transparent;
 		&:hover {
 			color: #e0e0e0;
 			border-bottom: 1px solid #e0e0e0;
@@ -336,4 +350,12 @@
 	.rub {
 		font-family: 'ALSRublRegular';
 	}
+
+	&__slider--big {
+		width: 100%;
+	}
+}
+
+.modal-big-img .modal__close {
+	margin-right: -4px;
 }

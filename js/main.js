@@ -104,6 +104,15 @@ $(function() {
 		/*$(".table-js").toggleClass('opened');*/
 	});
 
+	var count = $(".product__table-content .table-js >tbody >tr").length;
+
+	console.log(count);
+
+	$(".table-js").each(function(i,item) {
+		if($(item).find("tbody >tr").length <= 3) {
+			$(item).next(".btn-open-js").hide();
+		}
+	})
 
 
 	/* Overflow
@@ -167,14 +176,14 @@ $(function() {
 	=================*/
 
 	$('.plus').on('click', function() {
-	  var val = parseFloat($('.sum').val());
-	  $('.sum').val(val + 1);
+	  var $this = $(this);
+	  var val = parseFloat($this.closest('.basket__counter').find('.sum').val());
+	  $this.closest('.basket__counter').find('.sum').val(val + 1);
 	})
 	$('.minus').on('click', function() {
-	  var val = parseFloat($('.sum').val());
-	  if (val > 1) {
-	     $('.sum').val(val - 1);   
-	  }
+	  var $this = $(this);
+	  var val = parseFloat($this.closest('.basket__counter').find('.sum').val());
+	  $this.closest('.basket__counter').find('.sum').val(val - 1);
 	});
 
 
@@ -221,6 +230,10 @@ $(function() {
 			telephone: "Пожалуйста,укажите номер телефона",
 			email: "Пожалуйста,укажите E-mail",
 		}
+	});
+
+	$("[data-fancybox]").fancybox({
+		touch : false,
 	});
 
 });
