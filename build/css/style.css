@@ -1589,6 +1589,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   border-top: 2px solid #ffab00;
+  white-space: nowrap;
 }
 .contact-input__field-wrap {
   position: relative;
