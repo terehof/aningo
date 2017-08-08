@@ -168,7 +168,7 @@ $(function() {
 	/*Telephone Mask
 	=================*/
 
-	 $(".input-mask").inputmask("+7 (999) 999-99-99", { clearMaskOnLostFocus: false });
+	 $(".input-mask").inputmask("+7 (999) 999-99-99", { clearMaskOnLostFocus: true, showMaskOnHover: false, });
 
 
 

@@ -234,12 +234,24 @@
 			padding-right: 15px;
 		}
 
+		&__fields {
+			flex-direction: column;
+			text-align: center;
+		}
+
 		&__fields input {
-			width: auto;
+			width: 60%;
+			margin-bottom: 0;
 		}
 
 		&__field-content label {
-			width: 225px;
+			width: 60%;
+			left: 50%;
+    		transform: translate(-50%,0);
+		}
+
+		&__field-content {
+			margin-bottom: 60px;
 		}
 	}
 
@@ -766,23 +778,14 @@
 	}
 
 	.contact-input {
-		&__fields {
-			flex-direction: column;
-		}
 
 		&__fields input {
 			width: 60%;
 			margin: 0 auto;
-			margin-bottom: 15px;
 		}
 
 		&__fields input:last-child {
 			margin-bottom: 0;
-		}
-
-		&__field-content {
-			margin-bottom: 40px;
-			text-align: center;
 		}
 
 		&__field-content label {
@@ -1230,7 +1233,12 @@
 
 	.contact-input {
 		&__fields input{
-			width: 80%;
+			width: 100%;
+		}
+
+		&__field-content label {
+			width: 100%;
+			font-size: 14px;
 		}
 	}
 
