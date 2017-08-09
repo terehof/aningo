@@ -1187,7 +1187,7 @@ body {
   transition: ease 0.3s;
 }
 .product .btn-open-js:hover::before {
-  background-image: url("../img/dashed-line-hover.svg");
+  opacity: 0.5;
   transition: ease 0.3s;
 }
 .product .table-js {
@@ -2761,9 +2761,6 @@ body {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .footer__telephone-container {
-    width: 27%;
-  }
   .footer__telephone-container a {
     font-size: 28px;
   }
@@ -3174,7 +3171,7 @@ body {
   }
   .footer__telephone-container p {
     text-align: left;
-    margin-left: 10px;
+    margin-left: 14px;
   }
   .footer__info--mobile {
     display: block;
