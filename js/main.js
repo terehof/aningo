@@ -233,7 +233,10 @@ $(function() {
 	});
 
 	$("[data-fancybox]").fancybox({
-		touch : false
+		touch : false,
+		buttons : [
+			'close'
+		]
 	});
 
 
